@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14B25" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="FailedBankDetails" syncable="YES">
+        <attribute name="closeDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="updateDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="zip" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="info" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FailedBankInfo" syncable="YES"/>
+    </entity>
+    <entity name="FailedBankInfo" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="details" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FailedBankDetails" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="FailedBankInfo" positionX="-2637" positionY="-2547" width="99" height="103"/>
+        <element name="FailedBankDetails" positionX="-2405" positionY="-2286" width="128" height="103"/>
+    </elements>
+</model>
