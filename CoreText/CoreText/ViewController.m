@@ -19,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.aSeTextView = [[ASETextView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview: self.aSeTextView];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
