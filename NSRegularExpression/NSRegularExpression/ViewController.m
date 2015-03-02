@@ -124,8 +124,8 @@
  */
 
 - (void)useRegularExpreesion {
-    NSString *staString = [NSString stringWithUTF8String:"let's gofgo gogo"];
-    NSString *pattern = @"(go\\s*)+";
+    NSString *staString = [NSString stringWithUTF8String:"[fdsfds].png"];
+    NSString *pattern = @"\\[(.*)\\]\\.png";
     NSError *error = nil;
     NSRegularExpression *rx = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
     
