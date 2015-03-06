@@ -2,8 +2,7 @@
 //  RealSubject.h
 //  NSProxy
 //
-//  Created by 王钱钧 on 15/3/5.
-//  Copyright (c) 2015年 Arthur. All rights reserved.
+//  Created by Arthur on 15/3/5.
 //
 
 #import <Foundation/Foundation.h>
