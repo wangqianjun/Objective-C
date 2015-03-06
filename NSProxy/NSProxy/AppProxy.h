@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LoginHandlerProtocol.h"
+#import "MessageHandlerProtocol.h"
 
-@interface AppProxy : NSProxy
+@interface AppProxy : NSProxy<LoginHandlerProtocol, MessageHandlerProtocol>
 
 + (instancetype)sharedProxy;
 

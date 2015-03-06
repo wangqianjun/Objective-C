@@ -7,8 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "MyProxy.h"
-#import "RealSubject.h"
+#import "AppProxy.h"
 
 @interface ViewController ()
 
@@ -18,11 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    MyProxy *myProxy = [MyProxy alloc];
-    RealSubject *realSub = [[RealSubject alloc]init];
-    [myProxy transformToObject:realSub];
-    [myProxy fun];
     
+    // 多代理
+    [[AppProxy sharedProxy] doLoginThing];
+    [[AppProxy sharedProxy] doMessageThing];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
