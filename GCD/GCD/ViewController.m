@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ObjcManager.h"
+#import "GCDGroup.h"
 
 @interface ViewController ()
 
@@ -18,13 +19,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    GCDGroup *testGroup = [[GCDGroup alloc]init];
+    [testGroup testDispatchGroup];
+    
 //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
 //        NSLog(@"1");
 //    });
 //    
 //    NSLog(@"2");
 
-    [self group];
+//    [self group];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

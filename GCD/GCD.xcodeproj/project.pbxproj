@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E74D458B1ABA6DC800EFE12E /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D458A1ABA6DC800EFE12E /* GCDGroup.m */; };
 		E7EA49141A6F41C300A99F1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA49131A6F41C300A99F1E /* main.m */; };
 		E7EA49171A6F41C300A99F1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA49161A6F41C300A99F1E /* AppDelegate.m */; };
 		E7EA491A1A6F41C300A99F1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA49191A6F41C300A99F1E /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E74D45891ABA6DC800EFE12E /* GCDGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDGroup.h; sourceTree = "<group>"; };
+		E74D458A1ABA6DC800EFE12E /* GCDGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDGroup.m; sourceTree = "<group>"; };
 		E7EA490E1A6F41C300A99F1E /* GCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EA49121A6F41C300A99F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7EA49131A6F41C300A99F1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 				E7EA49161A6F41C300A99F1E /* AppDelegate.m */,
 				E7EA49181A6F41C300A99F1E /* ViewController.h */,
 				E7EA49191A6F41C300A99F1E /* ViewController.m */,
+				E74D45891ABA6DC800EFE12E /* GCDGroup.h */,
+				E74D458A1ABA6DC800EFE12E /* GCDGroup.m */,
 				E7EA49371A6F41F900A99F1E /* ObjcManager.h */,
 				E7EA49381A6F41F900A99F1E /* ObjcManager.m */,
 				E7EA491B1A6F41C300A99F1E /* Main.storyboard */,
@@ -228,6 +233,7 @@
 				E7EA49391A6F41F900A99F1E /* ObjcManager.m in Sources */,
 				E7EA49171A6F41C300A99F1E /* AppDelegate.m in Sources */,
 				E7EA49141A6F41C300A99F1E /* main.m in Sources */,
+				E74D458B1ABA6DC800EFE12E /* GCDGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +424,7 @@
 				E7EA49331A6F41C300A99F1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7EA49341A6F41C300A99F1E /* Build configuration list for PBXNativeTarget "GCDTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +433,7 @@
 				E7EA49361A6F41C300A99F1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
