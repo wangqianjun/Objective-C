@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E70434A71B15A72D0036ED0F /* ASEOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E70434A61B15A72D0036ED0F /* ASEOperation.m */; };
 		E74D458B1ABA6DC800EFE12E /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D458A1ABA6DC800EFE12E /* GCDGroup.m */; };
+		E783323D1B0B633B00CD2FC6 /* ASEThread.m in Sources */ = {isa = PBXBuildFile; fileRef = E783323C1B0B633B00CD2FC6 /* ASEThread.m */; };
+		E7E1DCDB1B140C1A006C26FF /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E1DCDA1B140C1A006C26FF /* GCDTimer.m */; };
+		E7E1DCDE1B14164F006C26FF /* DispatchSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E1DCDD1B14164F006C26FF /* DispatchSource.m */; };
 		E7EA49141A6F41C300A99F1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA49131A6F41C300A99F1E /* main.m */; };
 		E7EA49171A6F41C300A99F1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA49161A6F41C300A99F1E /* AppDelegate.m */; };
 		E7EA491A1A6F41C300A99F1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EA49191A6F41C300A99F1E /* ViewController.m */; };
@@ -29,8 +33,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E70434A51B15A72D0036ED0F /* ASEOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASEOperation.h; sourceTree = "<group>"; };
+		E70434A61B15A72D0036ED0F /* ASEOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASEOperation.m; sourceTree = "<group>"; };
 		E74D45891ABA6DC800EFE12E /* GCDGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDGroup.h; sourceTree = "<group>"; };
 		E74D458A1ABA6DC800EFE12E /* GCDGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDGroup.m; sourceTree = "<group>"; };
+		E783323B1B0B633B00CD2FC6 /* ASEThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASEThread.h; sourceTree = "<group>"; };
+		E783323C1B0B633B00CD2FC6 /* ASEThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASEThread.m; sourceTree = "<group>"; };
+		E7E1DCD91B140C1A006C26FF /* GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
+		E7E1DCDA1B140C1A006C26FF /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
+		E7E1DCDC1B14164F006C26FF /* DispatchSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchSource.h; sourceTree = "<group>"; };
+		E7E1DCDD1B14164F006C26FF /* DispatchSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchSource.m; sourceTree = "<group>"; };
 		E7EA490E1A6F41C300A99F1E /* GCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EA49121A6F41C300A99F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7EA49131A6F41C300A99F1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -93,6 +105,14 @@
 				E7EA49191A6F41C300A99F1E /* ViewController.m */,
 				E74D45891ABA6DC800EFE12E /* GCDGroup.h */,
 				E74D458A1ABA6DC800EFE12E /* GCDGroup.m */,
+				E7E1DCD91B140C1A006C26FF /* GCDTimer.h */,
+				E7E1DCDA1B140C1A006C26FF /* GCDTimer.m */,
+				E7E1DCDC1B14164F006C26FF /* DispatchSource.h */,
+				E7E1DCDD1B14164F006C26FF /* DispatchSource.m */,
+				E70434A51B15A72D0036ED0F /* ASEOperation.h */,
+				E70434A61B15A72D0036ED0F /* ASEOperation.m */,
+				E783323B1B0B633B00CD2FC6 /* ASEThread.h */,
+				E783323C1B0B633B00CD2FC6 /* ASEThread.m */,
 				E7EA49371A6F41F900A99F1E /* ObjcManager.h */,
 				E7EA49381A6F41F900A99F1E /* ObjcManager.m */,
 				E7EA491B1A6F41C300A99F1E /* Main.storyboard */,
@@ -232,6 +252,10 @@
 				E7EA491A1A6F41C300A99F1E /* ViewController.m in Sources */,
 				E7EA49391A6F41F900A99F1E /* ObjcManager.m in Sources */,
 				E7EA49171A6F41C300A99F1E /* AppDelegate.m in Sources */,
+				E783323D1B0B633B00CD2FC6 /* ASEThread.m in Sources */,
+				E7E1DCDE1B14164F006C26FF /* DispatchSource.m in Sources */,
+				E7E1DCDB1B140C1A006C26FF /* GCDTimer.m in Sources */,
+				E70434A71B15A72D0036ED0F /* ASEOperation.m in Sources */,
 				E7EA49141A6F41C300A99F1E /* main.m in Sources */,
 				E74D458B1ABA6DC800EFE12E /* GCDGroup.m in Sources */,
 			);

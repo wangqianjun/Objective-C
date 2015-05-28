@@ -9,8 +9,12 @@
 #import "ViewController.h"
 #import "ObjcManager.h"
 #import "GCDGroup.h"
-
+#import <libkern/OSAtomic.h>
+#import "ASEThread.h"
+#import "DispatchSource.h"
 @interface ViewController ()
+
+@property (strong, nonatomic) DispatchSource *dispatchSource;
 
 @end
 
@@ -18,10 +22,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    GCDGroup *testGroup = [[GCDGroup alloc]init];
-    [testGroup testDispatchGroup];
-    
+
+//    GCDGroup *testGroup = [[GCDGroup alloc]init];
+//    [testGroup testDispatchGroup];
+
 //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
 //        NSLog(@"1");
 //    });
@@ -30,6 +34,47 @@
 
 //    [self group];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSAssert(NSThread.isMainThread,
+             @"Error: Method needs to be called on the main thread. %@",
+             [NSThread callStackSymbols]);
+    
+//    [self testApply];
+    [self testSource];
+    
+    
+    /*
+    dispatch_queue_t queue = dispatch_get_main_queue();
+    
+    // 3
+    static dispatch_source_t source = nil;
+    
+    // 4
+    __typeof(self) __weak weakSelf = self;
+    
+    // 5
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        // 6
+        source = dispatch_source_create(DISPATCH_SOURCE_TYPE_SIGNAL, SIGSTOP, 0, queue);
+        
+        // 7
+        if (source)
+        {
+            // 8
+            dispatch_source_set_event_handler(source, ^{
+                // 9
+                NSLog(@"Hi, I am: %@", weakSelf);
+            });
+            dispatch_resume(source); // 10
+        }
+    });
+     
+     */
+    
+//    GCDTimer *gcdTimer = [[GCDTimer alloc]init];
+//    [gcdTimer startTimer];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,5 +123,45 @@
     });
 
 }
+
+
+#pragma mark - Thread
+- (void)testThread
+{
+//    NSArray
+//    NSMutableSet *threads = [NSMutableSet set];
+//    NSUInteger numberCount = self.nu
+}
+
+
+#pragma mark - Apply
+- (void)testApply
+{
+    //用时 2.118s
+    for (size_t y = 0; y < 100; ++y) {
+        for (size_t x = 0; x < 100; ++x) {
+            // Do something with x and y here
+            NSLog(@"           x = %zu y = %zu",x,y);
+        }
+    }
+    
+    // 用时 1.593s ， 性能明显提升
+    dispatch_apply(100, dispatch_get_global_queue(0, 0), ^(size_t y) {
+        for (size_t x = 0; x < 100; x++) {
+            NSLog(@"x = %zu y = %zu",x,y);
+        }
+    });
+}
+
+
+#pragma mark - 监视文件
+- (void)testSource
+{
+    self.dispatchSource = [[DispatchSource alloc]init];
+    [self.dispatchSource startTimer];
+}
+
+
+
 
 @end
