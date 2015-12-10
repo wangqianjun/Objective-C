@@ -7,7 +7,40 @@
 //
 
 #import "UIViewController+Logging.h"
+#import "Aspects.h"
+
+static  NSTimeInterval _begain;
+static  NSTimeInterval _end;
+static  NSTimeInterval _time;
 
 @implementation UIViewController (Logging)
 
++ (void)viewDidloadLogging
+{
+    [UIViewController aspect_hookSelector:@selector(viewDidLoad) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo>aspectInfo, BOOL animated){
+        NSLog(@"View Controller %@ will appear animated: %tu", [aspectInfo.instance class], animated);
+        NSLog(@"arguments:%@",[aspectInfo arguments]);
+        NSLog(@"originalInvocation:%@",[aspectInfo originalInvocation]);
+    } error:NULL];
+}
+
+
++ (void)viewDidAppearLogging
+{
+    [[self class] aspect_hookSelector:@selector(viewDidAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo>aspectInfo, BOOL animated){
+        _end = CACurrentMediaTime();
+        
+        NSLog(@"_end = %f",_end);
+        
+        
+        _time = _end - _begain;
+        
+        NSLog(@"_time = %f",_time);
+
+        
+        NSLog(@"View Controller %@ did appear animated: %tu", [aspectInfo.instance class], animated);
+        NSLog(@"arguments:%@",[aspectInfo arguments]);
+        NSLog(@"originalInvocation:%@",[aspectInfo originalInvocation]);
+    } error:NULL];
+}
 @end

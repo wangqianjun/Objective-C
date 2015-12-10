@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  SwizzledAOP
+//  NSURLConnection&NSURLSession
 //
-//  Created by 王钱钧 on 15/9/11.
-//  Copyright (c) 2015年 王钱钧. All rights reserved.
+//  Created by 王钱钧 on 15/12/7.
+//  Copyright © 2015年 ASE. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "UIViewController+Logging.h"
 
 @interface AppDelegate ()
 
@@ -18,8 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [UIViewController viewDidloadLogging];
-    [UIViewController viewDidAppearLogging];
     return YES;
 }
 

@@ -10,4 +10,8 @@
 
 @interface UIViewController (Logging)
 
++ (void)viewDidloadLogging;
+
++ (void)viewDidAppearLogging;
+
 @end
