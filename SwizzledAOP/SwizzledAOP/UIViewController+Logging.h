@@ -14,4 +14,6 @@
 
 + (void)viewDidAppearLogging;
 
++ (void)loadViewLogging;
+
 @end

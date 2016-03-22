@@ -15,6 +15,16 @@ static  NSTimeInterval _time;
 
 @implementation UIViewController (Logging)
 
++ (void)loadViewLogging
+{
+    [UIViewController aspect_hookSelector:@selector(loadView) withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo>aspectInfo, BOOL animated){
+        NSLog(@"View Controller %@ will appear animated: %tu", [aspectInfo.instance class], animated);
+        NSLog(@"arguments:%@",[aspectInfo arguments]);
+        NSLog(@"originalInvocation:%@",[aspectInfo originalInvocation]);
+    } error:NULL];
+
+}
+
 + (void)viewDidloadLogging
 {
     [UIViewController aspect_hookSelector:@selector(viewDidLoad) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo>aspectInfo, BOOL animated){

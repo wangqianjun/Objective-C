@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7D6D0361C2A51360062B835 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D6D0351C2A51360062B835 /* Aspects.m */; };
 		E7EC9B961C15AA090086A7D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EC9B951C15AA090086A7D4 /* main.m */; };
 		E7EC9B991C15AA090086A7D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EC9B981C15AA090086A7D4 /* AppDelegate.m */; };
 		E7EC9B9C1C15AA090086A7D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EC9B9B1C15AA090086A7D4 /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E7D6D0341C2A51360062B835 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		E7D6D0351C2A51360062B835 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
 		E7EC9B911C15AA090086A7D4 /* NSURLConnection&NSURLSession.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NSURLConnection&NSURLSession.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EC9B951C15AA090086A7D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E7EC9B971C15AA090086A7D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +81,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7D6D0331C2A51360062B835 /* Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				E7D6D0341C2A51360062B835 /* Aspects.h */,
+				E7D6D0351C2A51360062B835 /* Aspects.m */,
+			);
+			name = Aspects;
+			path = ../../../../workSpace/YH_Mall_v3.3/YH_Mall_Dev/YH_Mall/YH_Mall/Dependences/Aspects;
+			sourceTree = "<group>";
+		};
 		E7EC9B881C15AA090086A7D4 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +114,7 @@
 		E7EC9B931C15AA090086A7D4 /* NSURLConnection&NSURLSession */ = {
 			isa = PBXGroup;
 			children = (
+				E7D6D0331C2A51360062B835 /* Aspects */,
 				E7EC9B971C15AA090086A7D4 /* AppDelegate.h */,
 				E7EC9B981C15AA090086A7D4 /* AppDelegate.m */,
 				E7EC9B9A1C15AA090086A7D4 /* ViewController.h */,
@@ -273,6 +287,7 @@
 				E7EC9B9C1C15AA090086A7D4 /* ViewController.m in Sources */,
 				E7EC9B991C15AA090086A7D4 /* AppDelegate.m in Sources */,
 				E7EC9B961C15AA090086A7D4 /* main.m in Sources */,
+				E7D6D0361C2A51360062B835 /* Aspects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
