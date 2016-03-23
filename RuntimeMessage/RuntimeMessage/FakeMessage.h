@@ -1,19 +1,17 @@
 //
-//  Message.h
+//  FakeMessage.h
 //  RuntimeMessage
 //
-//  Created by 王钱钧 on 16/3/22.
+//  Created by 王钱钧 on 16/3/23.
 //  Copyright © 2016年 ASE. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface Message : NSObject
-
-+ (void)sendMessage:(NSString *)message;
+@interface FakeMessage : NSObject
 
 - (void)sendMessage:(NSString *)message;
 
-- (void)unrecognizedSelector:(SEL)sel;
+- (void)sendFakeMessage:(NSString *)fakeMsg;
 
 @end

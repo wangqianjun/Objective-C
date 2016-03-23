@@ -8,6 +8,7 @@
 
 #import "Message.h"
 #import <objc/runtime.h>
+#import "FakeMessage.h"
 
 static void dynamicMethodIMP(id self, SEL _cmd) {
     NSLog(@"dynamic-> \n self: %@ \n SEL: %s", self, _cmd);
@@ -46,7 +47,11 @@ static void dynamicMethodIMP(id self, SEL _cmd) {
 - (id)forwardingTargetForSelector:(SEL)aSelector
 {
     NSLog(@"%s", __func__);
-
+    
+    
+    // 可以把消息转发给另一个对象
+//    return [[FakeMessage alloc]init];
+    
     return nil;
 }
 
@@ -57,8 +62,13 @@ static void dynamicMethodIMP(id self, SEL _cmd) {
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
 {
     NSLog(@"%s", __func__);
-
-    return nil;
+    
+    
+    // 重定向为 unrecognizedSelector: 方法
+    SEL unrecognizedSelector = @selector(unrecognizedSelector:);
+    NSMethodSignature *methodSig = [[self class] instanceMethodSignatureForSelector:unrecognizedSelector];
+    
+    return methodSig;
 }
 
 
@@ -69,11 +79,22 @@ static void dynamicMethodIMP(id self, SEL _cmd) {
 {
     NSLog(@"%s", __func__);
     
+    FakeMessage *aFakeMessage = [[FakeMessage alloc]init];
+    if ([aFakeMessage respondsToSelector:[anInvocation selector]]) {
+        [anInvocation invokeWithTarget:aFakeMessage];
+    } else {
+        [super forwardInvocation:anInvocation];
+    }
+    
 }
 
 - (void)unrecognizedSelector:(SEL)sel
 {
+    NSLog(@"%s", __func__);
     
+    NSLog(@"unrecognized method");
+
+
 }
 
 @end

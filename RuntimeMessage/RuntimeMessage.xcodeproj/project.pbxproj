@@ -16,6 +16,7 @@
 		E7234C851CA13CDC0068FAA9 /* RuntimeMessageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7234C841CA13CDC0068FAA9 /* RuntimeMessageTests.m */; };
 		E7234C901CA13CDC0068FAA9 /* RuntimeMessageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7234C8F1CA13CDC0068FAA9 /* RuntimeMessageUITests.m */; };
 		E7234C9F1CA13D890068FAA9 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = E7234C9E1CA13D890068FAA9 /* Message.m */; };
+		E7234CA21CA21E1F0068FAA9 /* FakeMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = E7234CA11CA21E1E0068FAA9 /* FakeMessage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		E7234C911CA13CDC0068FAA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7234C9D1CA13D890068FAA9 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		E7234C9E1CA13D890068FAA9 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		E7234CA01CA21E1E0068FAA9 /* FakeMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeMessage.h; sourceTree = "<group>"; };
+		E7234CA11CA21E1E0068FAA9 /* FakeMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeMessage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				E7234C711CA13CDB0068FAA9 /* ViewController.m */,
 				E7234C9D1CA13D890068FAA9 /* Message.h */,
 				E7234C9E1CA13D890068FAA9 /* Message.m */,
+				E7234CA01CA21E1E0068FAA9 /* FakeMessage.h */,
+				E7234CA11CA21E1E0068FAA9 /* FakeMessage.m */,
 				E7234C731CA13CDB0068FAA9 /* Main.storyboard */,
 				E7234C761CA13CDB0068FAA9 /* Assets.xcassets */,
 				E7234C781CA13CDB0068FAA9 /* LaunchScreen.storyboard */,
@@ -279,6 +284,7 @@
 				E7234C9F1CA13D890068FAA9 /* Message.m in Sources */,
 				E7234C6F1CA13CDB0068FAA9 /* AppDelegate.m in Sources */,
 				E7234C6C1CA13CDB0068FAA9 /* main.m in Sources */,
+				E7234CA21CA21E1F0068FAA9 /* FakeMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
